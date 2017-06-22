@@ -44,7 +44,7 @@ static NSString *gifUrl = @"https://www.tuchuang001.com/images/2017/05/01/QQ2015
         type = SDWebImageScaleDownLargeImages;
     }
     [[SDWebImageManager sharedManager] loadImageWithURL:[NSURL URLWithString:bigUrl] options:type progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
-        NSLog(@"收到：%d---总共：%d",receivedSize,expectedSize);
+        NSLog(@"收到：%ld---总共：%ld",(long)receivedSize,(long)expectedSize);
     } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
         self.imageView.image = image;
     }];
@@ -60,7 +60,7 @@ static NSString *gifUrl = @"https://www.tuchuang001.com/images/2017/05/01/QQ2015
 - (IBAction)clickButton2:(id)sender {
     self.imageView.image = nil;
     [[SDWebImageManager sharedManager] loadImageWithURL:[NSURL URLWithString:url] options:SDWebImageHandleCookies progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
-        NSLog(@"收到：%d---总共：%d",receivedSize,expectedSize);
+        NSLog(@"收到：%ld---总共：%ld",(long)receivedSize,(long)expectedSize);
     } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
         self.imageView.image = image;
     }];
@@ -73,7 +73,7 @@ static NSString *gifUrl = @"https://www.tuchuang001.com/images/2017/05/01/QQ2015
  */
 - (IBAction)clickButton3:(id)sender {
     [[SDWebImageManager sharedManager] loadImageWithURL:[NSURL URLWithString:bigUrl] options:SDWebImageAllowInvalidSSLCertificates progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
-        NSLog(@"收到：%d---总共：%d",receivedSize,expectedSize);
+        NSLog(@"收到：%ld---总共：%ld",(long)receivedSize,(long)expectedSize);
     } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
         self.imageView.image = image;
     }];
@@ -87,7 +87,7 @@ static NSString *gifUrl = @"https://www.tuchuang001.com/images/2017/05/01/QQ2015
  */
 - (IBAction)clickButton4:(id)sender {
     [[SDWebImageManager sharedManager] loadImageWithURL:[NSURL URLWithString:bigUrl] options:SDWebImageAllowInvalidSSLCertificates|SDWebImageContinueInBackground progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
-        NSLog(@"收到：%d---总共：%d",receivedSize,expectedSize);
+        NSLog(@"收到：%ld---总共：%ld",(long)receivedSize,(long)expectedSize);
     } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, SDImageCacheType cacheType, BOOL finished, NSURL * _Nullable imageURL) {
         self.imageView.image = image;
     }];

@@ -30,7 +30,7 @@
 - (IBAction)getImageType:(id)sender {
     NSData *imageData = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"rock.gif" ofType:nil]];
     SDImageFormat formate = [NSData sd_imageFormatForImageData:imageData];
-    NSString *message = [NSString stringWithFormat:@"%d",formate];
+    NSString *message = [NSString stringWithFormat:@"%ld",(long)formate];
     showMessage(message,self);
 }
 

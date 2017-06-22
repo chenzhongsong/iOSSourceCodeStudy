@@ -53,7 +53,7 @@
 #endif
         CGImageRelease(CGImage);
     }
-
+    
     CFRelease(source);
 
     return staticImage;

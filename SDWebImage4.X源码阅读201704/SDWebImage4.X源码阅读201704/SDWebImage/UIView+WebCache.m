@@ -35,7 +35,7 @@ static char TAG_ACTIVITY_SHOW;
 
 /**
  所有UIView及其子类都是通过这个方法来加载图片
-
+ 
  @param url 加载的url
  @param placeholder 占位图
  @param options 加载选项
