@@ -321,7 +321,7 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
     //把数据存入路径
     [_fileManager createFileAtPath:cachePathForKey contents:imageData attributes:nil];
     
-    // disable iCloud backup
+    // disable iCloud backup备份
     if (self.config.shouldDisableiCloud) {
         //给文件添加到运行存储到iCloud属性
         [fileURL setResourceValue:@YES forKey:NSURLIsExcludedFromBackupKey error:nil];
@@ -382,7 +382,7 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
 
 /**
  根据指定的key，获取存储在磁盘上的数据
-
+ 
  @param key 图片对应的key
  @return 返回图片数据
  */
@@ -413,7 +413,7 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
         if (imageData) {
             return imageData;
         }
-
+        
         // fallback because of https://github.com/rs/SDWebImage/pull/976 that added the extension to the disk file name
         // checking the key with and without the extension
         imageData = [NSData dataWithContentsOfFile:filePath.stringByDeletingPathExtension];

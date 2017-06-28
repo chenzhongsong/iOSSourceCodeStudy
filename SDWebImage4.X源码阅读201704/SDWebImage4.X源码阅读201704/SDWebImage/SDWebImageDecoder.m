@@ -309,7 +309,7 @@ static const CGFloat kDestSeemOverlap = 2.0f;   // the numbers of pixels to over
 
 /**
  获取图片的色彩空间
-
+ 
  @param imageRef 图片
  @return 色彩空间
  */

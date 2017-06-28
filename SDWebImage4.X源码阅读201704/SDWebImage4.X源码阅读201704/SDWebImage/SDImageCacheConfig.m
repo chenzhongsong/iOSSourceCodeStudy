@@ -7,7 +7,7 @@
  */
 
 #import "SDImageCacheConfig.h"
-
+//默认最大缓存时间  1周
 static const NSInteger kDefaultCacheMaxCacheAge = 60 * 60 * 24 * 7; // 1 week
 
 @implementation SDImageCacheConfig

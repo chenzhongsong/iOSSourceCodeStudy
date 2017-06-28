@@ -106,7 +106,7 @@
 
 /**
  初始化SDImageCache和SDWebImageDownloader对象
-
+ 
  @param cache SDImageCache对象
  @param downloader SDWebImageDownloader对象
  @return 返回初始化结果
